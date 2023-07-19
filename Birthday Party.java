@@ -22,17 +22,24 @@
 // Explanation
 // One cake has 3 slices. And there are 2 friends. So Abhilash can't share one cake without being left out with a slice. So he needs to buy at least 2 Cakes. And if he buys 2 Cakes he can give 3 slices to one friend and 3 to another. So the minimum number of Cakes Abhilash needs to buy is equal to 2.
 
-#include <bits/stdc++.h> // header file includes every Standard library
-using namespace std;
-int main() {
-    long long k2, k3;
-    cin >> k2 >> k3;
-    long long k4 = 0;
-    if (k2 % 2 == 0 && k3 % 2 != 0) {
-        k4 = (k2 * k3) / k3;
-    } else {
-        k4 = (k2 + k3 - 1) / k3;
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        long k = sc.nextLong();
+
+        long res = 0;
+        if (n % 2 == 0 && k % 2 != 0) {
+            res = (n * k) / k;
+        } else {
+            res = (n + k - 1) / k;
+        }
+        System.out.println(res);
     }
-    cout << k4 << endl;
-    return 0;
 }
